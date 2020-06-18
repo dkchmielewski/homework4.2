@@ -1,23 +1,28 @@
 public class Test {
     public static void main(String[] args) {
         Person person1 = new Person("Daniel", "Chmielewski");
-        Task task1 = new Task("Software update", "Update Android software", 9, person1);
+        Task task1 = new Task("Software update", "Update Android software", 4, person1);
         task1.showInfo();
-        task1.highPriority(9);
-
+        System.out.println("High priority? " + task1.highPriority());
+        System.out.println("Medium priority? " + task1.mediumPriority());
+        System.out.println("Low priority? " + task1.lowPriority());
 
         Person person2 = new Person("Jan", "Kowalski");
         Task task2 = new Task("Grade homework", "Grade computer science homework for 10 students",
                 0, person2);
         System.out.println();
         task2.showInfo();
-        task2.mediumPriority(0);
+        System.out.println("High priority? " + task2.highPriority());
+        System.out.println("Medium priority? " + task2.mediumPriority());
+        System.out.println("Low priority? " + task2.lowPriority());
 
         Person person3 = new Person("Piotr", "Nowak");
         Task task3 = new Task("Do groceries", "Buy milk and bread", -4, person3);
         System.out.println();
         task3.showInfo();
-        task3.lowPriority(-4);
+        System.out.println("High priority? " + task3.highPriority());
+        System.out.println("Medium priority? " + task3.mediumPriority());
+        System.out.println("Low priority? " + task3.lowPriority());
 
         Task task4 = new Task("Repair car", "Fix the engine");
         System.out.println();
@@ -27,7 +32,9 @@ public class Test {
                 2);
         System.out.println();
         task5.showInfoNoPerson();
-        task5.highPriority(2);
+        System.out.println("High priority? " + task5.highPriority());
+        System.out.println("Medium priority? " + task5.mediumPriority());
+        System.out.println("Low priority? " + task5.lowPriority());
 
     }
 }

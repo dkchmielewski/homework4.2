@@ -19,28 +19,16 @@ public class Task {
         this.person = person;
     }
 
-    boolean highPriority(int priority) {
-        this.priority = priority;
-        if (priority > 0) {
-            System.out.println("High priority");
-        }
-        return true;
+    boolean highPriority() {
+        return priority > 0;
     }
 
-    boolean mediumPriority(int priority) {
-        this.priority = priority;
-        if (priority == 0) {
-            System.out.println("Medium priority");
-        }
-        return true;
+    boolean mediumPriority() {
+        return priority == 0;
     }
 
-    boolean lowPriority(int priority) {
-        this.priority = priority;
-        if (priority < 0) {
-            System.out.println("Low priority");
-        }
-        return true;
+    boolean lowPriority() {
+        return priority < 0;
     }
 
     void showInfo() {
