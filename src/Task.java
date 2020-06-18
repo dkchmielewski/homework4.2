@@ -4,7 +4,6 @@ public class Task {
     Integer priority;
     Person person;
 
-    //constructors
     Task(String name, String description) {
         this.name = name;
         this.description = description;
@@ -20,33 +19,35 @@ public class Task {
         this.person = person;
     }
 
-    //methods
-    void highPriority(int priority) {
+    boolean highPriority(int priority) {
         this.priority = priority;
         if (priority > 0) {
             System.out.println("High priority");
         }
+        return true;
     }
 
-    void mediumPriority(int priority) {
+    boolean mediumPriority(int priority) {
         this.priority = priority;
         if (priority == 0) {
             System.out.println("Medium priority");
         }
+        return true;
     }
 
-    void lowPriority(int priority) {
+    boolean lowPriority(int priority) {
         this.priority = priority;
         if (priority < 0) {
             System.out.println("Low priority");
         }
+        return true;
     }
 
     void showInfo() {
-        System.out.println("Task: " + name);
-        System.out.println("Description: " + description);
-        System.out.println("Priority: " + priority);
-        System.out.println("Person: " + person.firstName + " " + person.lastName);
+            System.out.println("Task: " + name);
+            System.out.println("Description: " + description);
+            System.out.println("Priority: " + priority);
+            System.out.println("Person: " + person.firstName + " " + person.lastName);
     }
 
     void showInfoNoPerson() {

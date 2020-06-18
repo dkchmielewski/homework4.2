@@ -23,9 +23,11 @@ public class Test {
         System.out.println();
         task4.showInfoNoPersonNoPriority();
 
-        Task task5 = new Task("Call clients", "Call at least 10 clients on the list", 2);
+        Task task5 = new Task("Call clients", "Call at least 10 clients on the list",
+                2);
         System.out.println();
         task5.showInfoNoPerson();
+        task5.highPriority(2);
 
     }
 }
